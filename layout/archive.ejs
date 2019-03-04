@@ -1,0 +1,31 @@
+<%- partial('_partial/header.ejs',{type: 'archive'})%>
+<div class="archives">
+    <%
+        var posts = [];
+        page.posts.each(function(post){
+            posts.push(post);
+        });
+        var sortPosts = _[_.orderBy ? 'orderBy' : 'sortByOrder'](posts, ['date'], ['desc']);
+    %>
+
+    <%
+        var y = 0, m = 0;
+        sortPosts.forEach(function(post, i){
+            var dt = post.date;
+            var ny = post.date.year();
+            var nm = post.date.month();
+            if(ny !== y || nm !== m) {
+                y = ny;
+                m = nm;
+                %>       
+                <h3 class="archive-date">
+                        <%- date(post.date, "YYYY年MM月") %>
+                </h3>
+            <% } %>
+        <p class="archive-list">
+            <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+        </p>
+        
+    <%})%>
+    <%- partial('_partial/paginator.ejs')%>
+</div>

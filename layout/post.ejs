@@ -1,0 +1,15 @@
+<%- partial('_partial/header.ejs',{type: 'post'})%>
+<div class="post">
+    <div class="post-con">
+        <div class="post-article">
+            <%- partial('_partial/article.ejs', {post: page, index: false})%>
+        </div>
+        <%- partial('_partial/comment.ejs')%>
+    </div>
+    <nav id="post-toc">
+        <h4 class="toc-title">目录</h4>
+        <%- toc(page.content, {class: 'post-toc',list_number: false}) %>
+    </nav>
+    
+</div>
+

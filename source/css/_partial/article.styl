@@ -1,0 +1,115 @@
+.article-list
+  padding: 40px 0
+  margin: 0 20px
+  border-bottom: 1px solid #eceff2;
+.article-list-title
+  display: block
+  margin-bottom: 10px
+  cursor: pointer
+  color: $color-default
+  font-size: 1.6em
+  font-weight: bold;
+.article-list-subtitle
+  font-size: .8em
+  color: #797979
+  display: flex
+  .iconfont
+    font-size: 1.4em
+    margin-right: 2px
+  div
+    margin-right: 16px
+    display: flex
+  a
+    color: #797979
+.article-list-con
+  padding: 12px 0 0 0
+  font-size: 1.1em
+  color:#565a5f
+  line-height: 30px
+  display: block
+  white-space: normal
+  word-break: break-all
+  .article-list-more
+    color: #999
+    font-size: 1em
+    background: #f5f8f9
+    padding: 2px 8px
+    border-radius: 10px
+    white-space: nowrap
+
+.article
+  @extend $base-style
+  border-bottom: 1px solid #f8f8f8;
+  padding:10px 0 20px 0 
+  p, table
+    line-height: line-height
+    margin: line-height 0
+  h1, h2, h3, h4, h5, h6
+    font-weight: bold
+    padding-top: 70px;
+    margin-top: -70px;
+  h1, h2, h3, h4, h5, h6
+    line-height: line-height-title
+  a
+    color: color-link
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+  ul, ol, dl
+    margin-top: line-height
+    margin-bottom: line-height
+  img, video
+    max-width: 100%
+    height: auto
+    display: block
+    margin: auto
+  iframe
+    border: none
+  table
+    width: 100%
+    border-collapse: collapse
+    border-spacing: 0
+  th
+    font-weight: bold
+    border-bottom: 3px solid color-border
+    padding-bottom: 0.5em
+  td
+    border-bottom: 1px solid color-border
+    padding: 10px 0
+  figure
+    margin: line-height 0px
+    background #282c34
+    padding 5px 10px
+    line-height 1.4em
+    font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace
+    overflow-x: scroll
+    overflow-y: scroll
+    max-height: 800px
+    border-radius: 5px
+    table
+      margin: 0
+    .gutter
+      padding: 0 8px
+      color: rgba(255, 255, 255, .2)
+    .code
+      color: #eef8fc
+    .comment
+      color: rgba(255, 255, 255, .4)
+  blockquote
+    padding: 16px 20px
+    border-left: 4px solid $color-border
+    color: lighten($primary-text-color, 30%)
+    background: $color-background
+    font-size: 1em
+    margin: line-height 0px
+    line-height: 1.8em
+    p
+      margin: 0
+    footer
+      font-size: font-size
+      margin: line-height 0
+      font-family: font-sans
+      cite
+        &:before
+          content: "—"
+          padding: 0 0.5em

@@ -1,0 +1,65 @@
+
+<header class="header header-<%- type %>">
+    <div class="header-bar-wrap">
+        <div class="header-bar">
+            <a class="header-title" href="/">
+                <img class="logo" src="<%- url_for(theme.logo) %>">
+                <img class="logo logo-dark" src="<%- url_for(theme.logo_dark) %>">
+                <span class="logo-title"><%= config.title %></span>
+            </a>
+            <!-- <div class="search">
+                <span class="iconfont">&#xe69f;</span>
+                <input type="text">
+            </div> -->
+            <div class="menu">
+                <% for(name in theme.menu) { %>
+                    <a class="menu-item" href="<%- url_for(theme.menu[name] )%>"><%= name %></a>
+                <% } %>
+            </div>
+            <div class="menu-mobile">
+                <div class="menu-moblie-icon"><span class="iconfont">&#xe608;</span></div>
+                <div class="menu-mobile-panel">
+                    <% for(name in theme.menu) { %>
+                        <a class="menu-mobile-item" href="<%- url_for(theme.menu[name] )%>"><%= name %></a>
+                    <% } %>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <% if(type == 'index'){%>
+        <div class="index-slogan">
+            <h1><%= config.title %></h1>
+            <p><%= config.subtitle %></p>
+        </div>   
+    <% } %>
+    <% if(type == 'post'){ %>
+        <div class="post-title">
+            <h1><%- page.title%></h1>
+            <div class="post-subtitle">
+                <div class="post-subtitle-item">
+                    <span class="iconfont">&#xe604;</span>
+                    <%- date(page.date, "YYYY-MM-DD hh:mm") %>
+                </div>
+                <div class="post-subtitle-item">
+                    <span class="iconfont">&#xe601;</span>
+                    <%- list_categories(page.categories, {show_count: false, class: 'title-categories'}) %>
+                </div>
+                <div class="post-subtitle-item">
+                    <span class="iconfont">&#xe7b4;</span>
+                    阅读<span id="busuanzi_value_page_pv"></span>次
+                </div>
+            </div>
+        </div>
+    <% } %>
+    <% if(type == 'archive'){ %>
+        <div class="post-title">
+            <h1>归档</h1>
+        </div>
+    <% } %>
+    <% if(type == 'resume'){ %>
+        <div class="post-title">
+            <h1>个人简介：</h1>
+        </div>
+    <% } %>
+</header>

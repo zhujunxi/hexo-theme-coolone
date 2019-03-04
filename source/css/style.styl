@@ -1,0 +1,89 @@
+@import "nib"
+@import "_variables"
+global-reset()
+@import "_iconfont"
+@import "_extend"
+@import "_partial/index"
+@import "_partial/article"
+@import "_partial/header"
+@import "_partial/post"
+@import "_partial/archive"
+@import "_partial/comment"
+
+body
+  background: $color-background
+  font: $font-size $font-sans
+  -webkit-text-size-adjust: 100%
+
+/* paginator */
+.pagination
+  text-align: center
+  padding: 40px 0
+  .page-btn
+    padding: 6px 12px
+    margin: 0 10px
+    border-radius: 100px
+    font-size: 1em
+    font-weight: 100
+    color: #999
+    border: 1px solid #999
+    &:hover
+      color: $color-default
+      border: 1px solid $color-default
+    .iconfont
+        font-size: .6em
+
+.gotop
+    @extend $card
+    position: fixed
+    bottom: 138px
+    left: 50%
+    margin-left: 640px
+    width: 60px
+    height: 60px
+    line-height: 60px
+    text-align: center
+    font-size: 2em
+    color: #6a6a6a
+    display: none
+    transition: transform .3s linear, opacity .3
+    cursor: pointer
+    &.show
+        display: block
+.footer
+    padding: 50px 0
+    text-align: center
+    p
+       font-size: 1em
+       color: #6A6A6A
+    a
+       color: #6A6A6A
+       text-decoration: underline
+
+a
+    
+    text-decoration: none
+
+input
+    outline: none 
+    border: none
+    padding: 0
+
+// ::-webkit-scrollbar
+//     -webkit-appearance: none
+//     width: 8px
+//     height: 8px
+//     &-track
+//       background-color: inherit
+//     &-thumb 
+//       background-color: $dividerColor
+//       border: 1px solid #fff
+//       border-radius: 10px
+//       &:hover
+//         background-color: darken($dividerColor, 10%)
+//       &:active
+//         background-color: darken($dividerColor, 20%)
+
+@media screen and (max-width:480px)
+    .gotop
+        display: none

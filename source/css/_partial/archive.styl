@@ -1,0 +1,29 @@
+.archives
+    width: 1200px
+    transform: translateY(-46px)
+    margin-bottom: -46px
+    margin: 0 auto
+    z-index 100
+    overflow: hidden
+    padding: 20px
+    box-sizing: border-box
+    @extend $card
+    .archive-date
+        font-size: 1.4em
+        line-height: 40px
+        font-weight: bold
+        color: #333333
+        margin-top: 10px
+    .archive-list
+        font-size: 1.2em
+        line-height: 28px
+        padding: 4px 0
+        padding-left: 10px
+        a
+            color: #565a5f
+
+@media screen and (max-width:480px)
+    .archives
+        width: 100%
+        transform: translateY(-0)
+        margin: 0

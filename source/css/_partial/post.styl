@@ -1,0 +1,55 @@
+.post
+    position: relative
+    width: 1200px
+    margin: 0 auto
+.post-con
+    width: 940px
+    transform: translateY(-46px)
+    margin-bottom: -46px
+    z-index 100
+    overflow: hidden
+    .post-article
+        padding: 20px
+        box-sizing: border-box
+        @extend $card
+.post-con-subtitle-wrap
+    display: none
+#post-toc
+    width: 240px
+    position: absolute
+    top: 20px
+    left 50%
+    margin-left: 360px
+    padding:15px 10px
+    box-sizing: border-box
+    @extend $card
+    &.fixed
+        position: fixed
+        top: 80px
+.toc-title
+    font-size: 1.4em
+    color: #333333
+    line-height: 40px
+.post-toc-item
+    padding: 5px 5px
+    margin: 8px 0
+    border-left: 2px solid #FFF
+    &.active
+        background: #f3f3f3
+        border-left: 2px solid #0c79a5
+        .post-toc-link
+            color: #0c79a5
+
+.post-toc-link
+    font-size: 1em
+    color: #333
+
+@media screen and (max-width:480px)
+    .post
+        width: 100%
+    .post-con
+        width: 100%
+        transform: translateY(0)
+        margin-bottom: 0
+    #post-toc
+        display: none

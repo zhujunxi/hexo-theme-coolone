@@ -1,0 +1,47 @@
+<%- partial('_partial/header.ejs', {type: 'index'})%>
+<div class="index-con">
+    <div class="index-con-left">
+        <%- partial('_partial/article-list.ejs', {post: page, index: true})%>
+    </div>
+    <div class="index-con-right">
+        <div class="about-me">
+            <div class="am-hd">
+                <%- image_tag('../image/head.jpg', {class: 'head-img'}) %>
+            </div>
+            <div class="am-bd">
+                <h2 class="author"><%- config.author %></h2>
+                <h3 class="introduce">WEB开发 / UI设计</h3>
+                <div class="location">
+                    <i class="iconfont">&#xe682;</i>
+                    中国 · 深圳
+                </div>
+            </div>
+            <div class="am-ft">
+                <a><span class="iconfont" title="Email:531578783@qq.com">&#xe60e;</span></a>
+                <a><span class="iconfont" title="微信:xingxiboy">&#xe600;</span></a>
+                <a href="https://github.com/zhujunxi" title="github"><span class="iconfont">&#xe885;</span></a>
+                <a href="https://www.zhihu.com/people/zhu-jun-xi-68/activities" title="知乎"><span class="iconfont">&#xe88b;</span></a>
+            </div>
+        </div>
+
+        
+
+        <% if (site.categories.length) { %>
+        <div class="widget">
+            <h3 class="widget-title">文章分类</h3>
+            <div class="widget-con">
+                <%- list_categories({class: 'widget'}) %>
+            </div>      
+        </div>
+        <% } %>
+
+        <% if (site.tags.length) { %>
+        <div class="widget">
+            <h3 class="widget-title">标签</h3>
+            <div class="widget-con">
+                <%- list_tags({class: 'widget'}) %>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+menu:
+  归档: /archives
+  标签: /archives
+  关于我: /resume
+
+# logo图片
+logo: /image/logo.png
+logo_dark: /image/logo-dark.png
+# 主页banner
+index_banner: /image/index-banner.png
+# 文章页banner
+article_banner: /image/article-banner.png
+
+excerpt_length: 200
+excerpt_link: '阅读更多'

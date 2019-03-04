@@ -1,0 +1,26 @@
+<% page.posts.each(function (post) { %>
+    <div class="article-list">
+        <a class="article-list-title" href="<%- url_for(post.path) %>"><%- post.title %></a>
+        <div class="article-list-subtitle">
+            <div class="article-list-date">
+                <span class="iconfont">&#xe604;</span>
+                <%- date(post.date, "YYYY-MM-DD") %>
+            </div>
+            <div class="article-list-categories">
+                <span class="iconfont">&#xe601;</span>
+                <%- list_categories(post.categories, {show_count: false, class: 'title-categories'}) %>
+                
+            </div>
+        </div>
+        <div class="article-list-con">
+            <%- post.excerpt ? strip_html(post.excerpt) : truncate(strip_html(post.content), {
+                length: theme.excerpt_length
+            }) %>
+            <a class="article-list-more" href="<%- url_for(post.path) %>">
+                <%= theme.excerpt_link %>
+            </a>
+        </div>
+    </div>
+<% }) %>
+
+<%- partial('_partial/paginator.ejs')%>
