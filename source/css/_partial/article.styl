@@ -58,6 +58,9 @@
   ul, ol, dl
     margin-top: line-height
     margin-bottom: line-height
+    list-style-type: circle
+  li
+    line-height: 30px
   img, video
     max-width: 100%
     height: auto
@@ -82,37 +85,35 @@
     padding 5px 10px
     line-height 1.4em
     font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace
-    overflow-x: scroll
-    overflow-y: scroll
     max-height: 800px
     border-radius: 5px
     table
       margin: 0
     .gutter
-      padding: 0 8px
+      padding: 0 4px
       color: rgba(255, 255, 255, .2)
     .code
       color: #eef8fc
     .comment
       color: rgba(255, 255, 255, .4)
-  blockquote
-    padding: 16px 20px
-    border-left: 4px solid $color-border
-    color: lighten($primary-text-color, 30%)
-    background: $color-background
-    font-size: 1em
-    margin: line-height 0px
-    line-height: 1.8em
-    p
-      margin: 0
-    footer
-      font-size: font-size
-      margin: line-height 0
-      font-family: font-sans
-      cite
-        &:before
-          content: "—"
-          padding: 0 0.5em
+  // blockquote
+  //   padding: 16px 20px
+  //   border-left: 4px solid $color-border
+  //   color: lighten($primary-text-color, 30%)
+  //   background: $color-background
+  //   font-size: 1em
+  //   margin: line-height 0px
+  //   line-height: 1.8em
+  //   p
+  //     margin: 0
+  //   footer
+  //     font-size: font-size
+  //     margin: line-height 0
+  //     font-family: font-sans
+  //     cite
+  //       &:before
+  //         content: "—"
+  //         padding: 0 0.5em
 
 .article-list
   margin: 0 40px 0 40px
