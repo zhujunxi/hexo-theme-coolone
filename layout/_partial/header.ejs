@@ -5,7 +5,7 @@
             <a class="header-title" href="/">
                 <img class="logo" src="<%- url_for(theme.logo) %>">
                 <img class="logo logo-dark" src="<%- url_for(theme.logo_dark) %>">
-                <span class="logo-title"><%= config.title %></span>
+                <span class="logo-title"><%= theme.title || config.title %></span>
             </a>
             <!-- <div class="search">
                 <span class="iconfont">&#xe69f;</span>
@@ -29,8 +29,8 @@
     </div>
     <% if(type == 'index'){%>
         <div class="index-slogan">
-            <h1><%= config.title %></h1>
-            <p><%= config.subtitle %></p>
+            <h1><%= theme.title || config.title %></h1>
+            <p><%= theme.subtitle || config.subtitle %></p>
         </div>   
     <% } %>
     <% if(type == 'post'){ %>

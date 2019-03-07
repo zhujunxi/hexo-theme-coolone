@@ -1,13 +1,12 @@
 .article-list
   padding: 40px 0
-  margin: 0 20px
-  border-bottom: 1px solid #eceff2;
+  margin: 0 0 0 40px
 .article-list-title
   display: block
   margin-bottom: 10px
   cursor: pointer
   color: $color-default
-  font-size: 1.6em
+  font-size: 1.8em
   font-weight: bold;
 .article-list-subtitle
   font-size: .8em
@@ -31,11 +30,12 @@
   word-break: break-all
   .article-list-more
     color: #999
+    background: #FFF
     font-size: 1em
-    background: #f5f8f9
     padding: 2px 8px
     border-radius: 10px
     white-space: nowrap
+    text-align: center
 
 .article
   @extend $base-style
@@ -113,3 +113,6 @@
         &:before
           content: "—"
           padding: 0 0.5em
+
+.article-list
+  margin: 0 40px 0 40px

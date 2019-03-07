@@ -11,12 +11,12 @@
 <nav class="pagination" role="pagination">
     <% if (page.prev) { %>
     <a class="page-btn" href="<%- url_for(page.prev_link) %>">
-        <span class="iconfont">&#xe679;</span> 上一页
+        <span class="iconfont">&#xe679;</span> PREV
     </a>
     <% } %>
     <% if (page.next) { %>
     <a class="page-btn" href="<%- url_for(page.next_link) %>">
-        下一页 <span class="iconfont">&#xe6a3;</span>
+        NEXT <span class="iconfont">&#xe6a3;</span>
     </a>
     <% } %>
 </nav>

@@ -9,11 +9,11 @@
                 <%- image_tag('../image/head.jpg', {class: 'head-img'}) %>
             </div>
             <div class="am-bd">
-                <h2 class="author"><%- config.author %></h2>
-                <h3 class="introduce">WEB开发 / UI设计</h3>
+                <h2 class="author"><%- theme.author || config.author %></h2>
+                <h3 class="introduce"><%- theme.work %></h3>
                 <div class="location">
                     <i class="iconfont">&#xe682;</i>
-                    中国 · 深圳
+                    <%- theme.location %>
                 </div>
             </div>
             <div class="am-ft">
@@ -24,11 +24,9 @@
             </div>
         </div>
 
-        
-
         <% if (site.categories.length) { %>
         <div class="widget">
-            <h3 class="widget-title">文章分类</h3>
+            <h3 class="widget-title"><span>文章分类</span></h3>
             <div class="widget-con">
                 <%- list_categories({class: 'widget'}) %>
             </div>      
@@ -37,7 +35,7 @@
 
         <% if (site.tags.length) { %>
         <div class="widget">
-            <h3 class="widget-title">标签</h3>
+            <h3 class="widget-title"><span>标 签</span></h3>
             <div class="widget-con">
                 <%- list_tags({class: 'widget'}) %>
             </div>

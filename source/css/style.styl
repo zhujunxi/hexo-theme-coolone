@@ -17,8 +17,10 @@ body
 
 /* paginator */
 .pagination
-  text-align: center
   padding: 40px 0
+  font: 1.4rem Oswald-Regular
+  display: flex
+  justify-content: center
   .page-btn
     padding: 6px 12px
     margin: 0 10px
@@ -26,27 +28,43 @@ body
     font-size: 1em
     font-weight: 100
     color: #999
-    border: 1px solid #999
+    display: flex
+    align-items: center
     &:hover
       color: $color-default
-      border: 1px solid $color-default
     .iconfont
         font-size: .6em
+// .pagination
+//   text-align: center
+//   padding: 40px 0
+//   .page-btn
+//     padding: 6px 12px
+//     margin: 0 10px
+//     border-radius: 100px
+//     font-size: 1em
+//     font-weight: 100
+//     color: #999
+//     border: 1px solid #999
+//     &:hover
+//       color: $color-default
+//       border: 1px solid $color-default
+//     .iconfont
+//         font-size: .6em
 
 .gotop
     @extend $card
     position: fixed
-    bottom: 138px
+    bottom: 157px
     left: 50%
-    margin-left: 640px
-    width: 60px
-    height: 60px
-    line-height: 60px
+    margin-left: 620px
+    width: 40px
+    height: 40px
+    line-height: 40px
     text-align: center
-    font-size: 2em
+    font-size: 1em
     color: #6a6a6a
     display: none
-    transition: transform .3s linear, opacity .3
+    transition: transform .3s linear, opacity .3s
     cursor: pointer
     &.show
         display: block

@@ -11,10 +11,10 @@
         width: 100%
         flex-shrink: 1
     .index-con-right
-        width: 300px
+        width: 340px
         flex-shrink: 0
         margin: 20px 0
-        padding: 0 20px
+        padding: 0 40px 0 40px
         box-sizing: border-box
 /* about me*/
 .about-me
@@ -58,33 +58,54 @@
 
 /* categories_list */
 .widget
-  padding: 30px 0
+  padding: 40px 0
   border-bottom: 1px solid #e6e6e6;
   &:last-child
     border: none
   .widget-title
+    text-align: center
     font-size: 1.2em
-    line-height: 2em
-    color: $color-default
+    font-weight: bold
+    span
+      display: inline-block
+      font-size: 1.2em
+      line-height: 2em
+      color: $color-default
+      position: relative
+      &:after
+        content: ''
+        height: 12px
+        width: 12px
+        border-radius:  2px 0 2px 0
+        background: linear-gradient(135deg, #999 30%, #CCC 75%, rgba(0, 0, 0, 0) 90%)
+        position: absolute
+        top: 6px
+        left: -4px
+        z-index: -1
   .widget-con
     padding: 10px 0 0 0px
-    .widget-list-item
-      font-size: 1em
-      line-height: 2em
-      cursor: pointer
-      .widget-list-link
-        color: $color-light
-        &:hover
-          color: $color-default
-      .widget-list-count
-        color: $color-light
-        &:hover
-          color: $color-default
-        font-size: .8em
-        &::before
-          content: ' ('
-        &::after
-          content: ')'  
+    .widget-list
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      .widget-list-item
+        font-size: 1em
+        line-height: 2em
+        cursor: pointer
+        margin:  0 5px
+        .widget-list-link
+          color: $color-light
+          &:hover
+            color: $color-default
+        .widget-list-count
+          color: $color-light
+          &:hover
+            color: $color-default
+          font-size: .8em
+          &::before
+            content: ' ('
+          &::after
+            content: ')'  
 
 // @media screen and (max-width:760px) {
     

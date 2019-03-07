@@ -1,15 +1,27 @@
+# html lang
+language: zh
+
 menu:
   归档: /archives
   标签: /archives
   关于我: /resume
 
-# logo图片
-logo: /image/logo.png
-logo_dark: /image/logo-dark.png
-# 主页banner
-index_banner: /image/index-banner.png
-# 文章页banner
-article_banner: /image/article-banner.png
+# Site settings
+title: '朱俊曦的博客'
+subtitle: 'The worst blog in the world.'
+description:
+keywords:
+author: '朱俊曦'
+work: 'WEB开发 / UI设计'
+location: '中国 · 深圳'
 
-excerpt_length: 200
-excerpt_link: '阅读更多'
+# UI settings
+logo: /image/logo.png #logo
+logo_dark: /image/logo-dark.png #logo-dark
+
+index_banner: /image/index-banner.png #主页banner
+article_banner: /image/article-banner.png  #文章页banner
+
+# Article settings
+excerpt_length: 300
+excerpt_link: '阅读更多>>'
