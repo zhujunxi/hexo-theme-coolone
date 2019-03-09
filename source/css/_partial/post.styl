@@ -22,6 +22,8 @@
     margin-left: 360px
     padding:15px 10px
     box-sizing: border-box
+    max-height: 700px
+    overflow-y: auto 
     @extend $card
     &.fixed
         position: fixed
@@ -33,10 +35,10 @@
 .post-toc-item
     padding: 5px 5px
     margin: 8px 0
-    border-left: 2px solid #FFF
+    list-style: none
+    border-radius: 4px
     &.active
         background: #f3f3f3
-        border-left: 2px solid #0c79a5
         .post-toc-link
             color: #0c79a5
 
