@@ -70,6 +70,15 @@
                     logoDark.style.display = 'none';
                 }
             },
+            // 
+            getClientWidth () {
+                let w = document.documentElement.clientWidth;
+                if(w === 480) {
+                    console.log(w)
+                }
+                
+            },
+            // TOC
             toc: (function () {
                 var toc = $('#post-toc');
     
@@ -164,4 +173,8 @@
             Blog.toc.fixed(top);
             Blog.toc.actived(top);
         }, false);
+        
+        w.onresize = function() {
+            Blog.getClientWidth()
+        }
 })(window, document);
